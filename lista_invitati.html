@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Lista Invitati</title>
+<style>
+
+</style>
+</head>
+<body>
+
+    <h1>Gestione degli Invitati</h1>
+        <form id="formInvitati">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <button type="submit">Aggiungi Invitato</button>
+        </form>
+        <h2>Lista Invitati</h2>
+        <button id="ordina" onclick="ordina()">Ordina</button>
+        <select id="filtra" onchange="aggiornaLista()">
+            <option value="T" selected>Tutti</option>
+            <option value="C">Confermati</option>
+            <option value="NC">Non Confermati</option>
+        </select>
+        <input type="text" id="cerca" placeholder="Cerca per nome o cognome o e-mail" oninput="aggiornaLista()">
+        <button id="esporta" onclick="esporta()">Esporta CSV</button>
+        <ul id="lista"></ul>
+        <script src="script.js"></script>
+
+    </body>
+</html>
